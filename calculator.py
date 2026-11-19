@@ -1,6 +1,6 @@
 # https://github.com/byherjournalist/lab11-NZ-PS
 # Partner 1: Nicky Zheng
-# Partner 2: PS
+# Partner 2: Prianka Subramanian
 
 import math
 
@@ -27,11 +27,6 @@ def multiply(a, b):
     return a * b
 
 
-def divide(a, b):
-    if a == 0:
-        raise ZeroDivisionError('Cannot divide by zero')
-    return b / a
-
 
 def logarithm(a, b):
     if a <= 0 or a == 1 or b <= 0:
@@ -48,9 +43,33 @@ def mul(a, b):
     return multiply(a, b)
 
 
-def div(a, b):
-    return divide(a, b)
-
 
 def exp(a, b):
     return exponent(a, b)
+
+
+import math
+
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+def mul(a, b):
+    return a * b
+
+def div(a, b):
+    if a == 0:
+        raise ZeroDivisionError
+    else:
+        return b/a
+
+def log(a,b):
+    if a <= 0 or b <= 0:
+        raise ValueError
+    else:
+        return math.log(b,a)
+
+def exp(a, b):
+    return a**(b)
